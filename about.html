@@ -3,16 +3,89 @@ layout: page
 title: About Me
 ---
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat commodo sed egestas egestas fringilla phasellus. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Ac auctor augue mauris augue neque gravida in. Vel turpis nunc eget lorem dolor sed viverra ipsum nunc. Morbi non arcu risus quis varius quam quisque. Convallis tellus id interdum velit. Eget gravida cum sociis natoque. Sed enim ut sem viverra aliquet eget sit amet tellus. Fringilla ut morbi tincidunt augue interdum velit. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Sit amet massa vitae tortor condimentum lacinia quis vel. Tellus orci ac auctor augue mauris augue neque. Id velit ut tortor pretium viverra suspendisse potenti. Accumsan in nisl nisi scelerisque eu. Eget est lorem ipsum dolor sit amet consectetur.
-</p>
-<img src="/assets/img/logo.png">
-<p>
-Augue mauris augue neque gravida in fermentum. Id consectetur purus ut faucibus pulvinar. Mauris nunc congue nisi vitae suscipit tellus mauris. Est ullamcorper eget nulla facilisi. Etiam sit amet nisl purus in. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Aliquam ut porttitor leo a diam. Risus sed vulputate odio ut. Sit amet porttitor eget dolor morbi non arcu risus quis. Cras fermentum odio eu feugiat pretium nibh ipsum. Quam id leo in vitae turpis massa sed. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Mattis enim ut tellus elementum sagittis. Bibendum arcu vitae elementum curabitur vitae. Nibh mauris cursus mattis molestie a.
-</p>
-<p>
-Velit scelerisque in dictum non consectetur a erat nam. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Dui sapien eget mi proin. Dapibus ultrices in iaculis nunc. Consequat id porta nibh venenatis. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Donec et odio pellentesque diam. Nibh tortor id aliquet lectus proin nibh nisl. Enim ut sem viverra aliquet eget sit amet tellus cras. Urna condimentum mattis pellentesque id nibh tortor. Tellus in hac habitasse platea dictumst vestibulum rhoncus. Enim facilisis gravida neque convallis a. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Morbi enim nunc faucibus a pellentesque. Pellentesque eu tincidunt tortor aliquam nulla. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Euismod lacinia at quis risus. Volutpat odio facilisis mauris sit.
-</p>
-<img src="/assets/img/logo.png">
-<p>
-Vel pharetra vel turpis nunc eget lorem dolor. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Nunc scelerisque viverra mauris in aliquam. A pellentesque sit amet porttitor eget dolor morbi non arcu. Ut tortor pretium viverra suspendisse potenti nullam ac. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Viverra ipsum nunc aliquet bibendum enim. Diam quam nulla porttitor massa. Ac turpis egestas integer eget aliquet nibh. In pellentesque massa placerat duis ultricies lacus sed. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Ut morbi tincidunt augue interdum. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
-</p>
+language & skills
+c ,  c++
+java , jsp, android studio
+swift
+python, django
+javascript (ES6) , vue.js, react, bootstrap
+웹크롤링, 한국어 형태소분석기
+ 
+프론트앤드, 백앤드,  앱개발 : 독학 (실무경험무)
+
+# 간단경력
+1. 자연어 text processing 후 명령어 매칭과정 구현 ( slot based categorization ) -＞ file I/o 함수 및 자료구조 리팩토링 함으로서 실행속도 약 2.7배 향상
+2. mecab 형태소 분석기 튜닝 ( CRF기반 코퍼스 러닝 ) -＞ 한글 토크나이제이션 정확도 약 5% 향상 
+3. 자연어 웹 크롤링 ( java jsoup )
+4. 영어-스페인어 번역기 구현 ( theano based seq2seq) -＞ 12만 코퍼스 러닝 -＞ loss value 0.6
+
+
+# 근무이력 ( 2017.01.02 ~ 2017.12.31 , 1년 )
+powervoice社
+자연어 후처리 프로세싱 개발
+:  전처리 -＞ 문장 토크나이징 -＞ 스태밍 -＞ 후처리를 통한  키워드 , POI extraction ( slot based categorization )
+회사에서 기존에 사용하던 C기반 후처리 프로세싱을 C++로 리팩토링 -＞ 약 2.7배 가량의 속도향상 도출 ( file reading부터 tokenization 후 keyword extraction 단계까지 )
+12만라인의 verbal corpus내에서 keyword extraction하는 과정을 python으로 자동화 -＞ 수작업으로 추출할 때 대비 비약적인 시간절감에 성공
+
+
+형태소 분석기 튜닝
+mecab : 기본 탑재된 한글 엔진 튜닝하여 한글 tokenization 5%가량 성능향상
+한글 코퍼스 100MB가량 트레이닝 ( CRF 기반 학습 ) , 쉘스크립트 이용하여 코퍼스 트레이닝 자동화 
+NER 추출용 트레이닝 역시 성공적
+
+# 웹크롤러를 이용한 네이버 영화 리뷰정보 추출
+library : :java jsoup
+
+기존의 리뷰의 문제점 1. 영화 댓글 알바들이 많아 평점에 신뢰가 가지 않음
+-＞ solution : 업계 관계자가 알려준 댓글 알바생의 특징을 기준으로 알바생 필터링 알고리즘 적용
+
+기존의 리뷰의 문제점 2. 평점란에 쓸데없는 후기를 전부 읽는 작업이 피곤
+-＞ solution : 영화에 대한 주관적 해석이 들어간 단어만 추출
+
+-＞ 단순 positive & negative로 이원화 된 sentiment analysis를 지양하고 디테일한 정보를 얻고자 시도
+-＞ 읽는 시간대비 얻는 정보의 양과 정확성 측면에서 효율성 극대화
+
+---
+
+# favorite music을 이용한 sentiment analysis ( 2인 프로젝트 )
+tools : apache 7 tomcat , jsp , javascript
+detail : 즐겨듣는 음악 플레이리스트의 장르분석 결과 취합하여 청취자의 성격 예측
+overview : Spotify API 이용하여 음악 플레이리스트 get ( json format ) -＞ 음원의 장르 get -＞ 장르기반 성격분석 알고리즘에 의거하여 청취자의 personality 예측
+
+-＞ 개발 시작단계 :  2주간의 아이디어 리서치 -＞ 앱 제작에 기반이 되는 theory 후보군 선정
+-＞ 아이디어 수렴 단계에서 의견마찰로 팀원과의 불화 있었으나 술 사주면서 잘 조율하여 의견수렴 및 분업화 성공
+-＞ 서버 클라이언트 연동단계에서 ajax 구현에 어려움 있었으나 3일간 잠줄여가며 시도하여 성공 
+-＞ 담당 교수에게 아이디어 development하여 성격에 따른 맞춤화 상품 제시하면 상품화 가치 있겠다는 피드백 들었으나 이후 추가적인 개발 없었음
+
+참조 페이퍼 : 선호 음악 장르와 듣는이의 성격에 상관관계 존재
+https://psychcentral.com/lib/preferred-music-style-is-tied-to-personality/
+
+----
+
+# java swing기반 GUI 게임 ( 학과목 4인 프로젝트 )
+
+-＞ 일정 후반부쯤 팀원들이 망한 프로젝트라 생각했는지 다들 포기
+-＞ 2주남은 시점에서 개발 약 20% 수행. 이때부터 본인혼자 개발하여 1주일만에 약 80% 구현
+-＞ 개발중 막히는 부분 생기면 stack overflow 등에 질문글 올려 자체해결 
+-＞ 팀원들이 자극을 받았는지 프로젝트에 복귀
+-＞ 이후 리더가 되어 업무분할. 개발 잘하는 친구에게 나머지 개발업무 인수인계, 문서작성 잘하는 친구에게 도큐멘테이션 지시, 말 잘하는 친구에게 프레젠테이션 지시 및 리허설 후 피드백
+-＞ 최종보고 후 최고등급 평가 받았으며, 다음학기 수업부터 본 팀의 프로젝트가 롤모델이 되어 수업시간에 소개됨
+
+
+------
+
+# 졸업작품 (  3인 프로젝트 )
+seq2seq 기반 스페인어-영어 번역기
+
+4개월간 neural network 기반지식 습득, 2개월간 theano 이용하여 구현
+해외 페이퍼 & 테크니컬 블로그 & 유튜브 강의 참조하여 독학
+학습순서 : MLP -＞ RNN -＞ LSTM -＞ sequence to sequence 
+-＞ 이론공부가 버거웠는지 나머지 팀원 모두 중도포기
+-＞ 정기적으로 스터디 주최하여 강의해주는 식으로 팔로잉 유도
+-＞ GTX 1070가지고 있는 친구에게 러닝 및 파라메터 옵티마이제이션 맡기고 나머지 친구에게 도큐멘테이션 및 프리젠테이션 지시
+project source  :  https://github.com/coleea/Natural-Language-Machine-Translator
+
+---
+# etc
+사용해본 툴 : git, docker
+사용해본 프레임워크 : ROS ( robot operating system )
