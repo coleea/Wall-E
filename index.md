@@ -6,4 +6,11 @@ permalink: /
 
 # 개발자 lkb
 
-코드 테스트 중이다
+리액트 네이티브에 대해 배워봅시다.
+
+```javascript 
+
+var d = require('땡땡이') ;
+console.log(d) ; 
+
+```
