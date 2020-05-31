@@ -4,6 +4,6 @@ layout: home
 permalink: /
 ---
 
-# i am index.md
+# 개발자 lkb
 
-i am index.md
+코드 테스트 중이다
