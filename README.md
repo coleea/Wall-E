@@ -1,79 +1,99 @@
-# Wall-E
+# jekyll-theme-console
 
-Wall-E is a modern Jekyll template with a magazine-like grid layout on the frontpage, beautiful typography and uncomplicated content. 
+A jekyll theme with inspiration from linux consoles for hackers, developers and script kiddies.
 
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
+<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenrec-dark.gif" width="550" title="Screenshot">
 
 ## Demo
-[wall-e-jekyll.github.io/](https://wall-e-jekyll.github.io/)
 
-## Contents
+[https://b2a3e8.github.io/jekyll-theme-console/](https://b2a3e8.github.io/jekyll-theme-console/)
 
-- [Features](#features)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Screenshots](#screenshots-desktop)
-    - [Desktop](#screenshots-desktop)
-    - [Mobile](#screenshots-mobile)
-- [Credits](#credits)
-- [License](#license)
+source code: [https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages](https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages)
 
-## Features
 
-- Mobile responsive, built with Semantic UI, customization is easy
-- Disqus is integrated by default
-- One column layout suitable for personal blogs with focus on content
-- Beautiful typography (uses League Gothic and Open Sans)
-- Feature image can be added to homescreen post cards
-- Search box links to Google search by default
+## Installation
+
+First, follow the steps in [this Quickstart Guide](https://jekyllrb.com/docs/) if you're starting with Jekyll from scratch. Skip this if you already have an existing jekyll project.
+
+### Remote theme method for GitHub Pages
+
+Use this method for sites hosted with GitHub Pages only. To install:
+
+1. Set `remote_theme` in your project's Jekyll `_config.yml` file:
+   
+   ```yaml
+   remote_theme: b2a3e8/jekyll-theme-console
+   ```
+
+### Gem-based method
+
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
+
+1. Add this line to your Jekyll site's `Gemfile`:
+   
+   ```ruby
+   gem "jekyll-theme-console"
+   ```
+
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+
+   ```bash
+   bundle
+   ```
+
+3. Set `theme` in your project's Jekyll `_config.yml` file:
+   
+   ```yaml
+   theme: jekyll-theme-console
+   ```
+   
+To update the theme run `bundle update`.
 
 ## Usage
 
-Wall-E is fully furnished right out of the box. To use this template on your blog
-- If this is your first Jekyll blog, follow this <a href="https://jekyllrb.com/docs/installation/">helpful guide</a> to set up Jekyll.
-- Fork this repository, rename the fork as `your-username.github.io`. Your blog should immediately be live on `https://your-username.github.io`
-- Clone your fork
-- Delete everything in `_posts` directory. Delete the `tmp` directory.
-- Open `_config.yml` and set the variables
-- Open `_includes/disqus.html` and `_includes/disqus-count.html` and replace the value of `disqus_shortname` variable to your Disqus username
-- Run `jekyll serve` and your blog should be live on `http://localhost:4000`. Make changes, test them locally, commit your changes and push to your fork. Your changes should be live in a couple of seconds
+In addition to jekyll's default configuration options, you can provide:
+- `header_pages` to specify which pages should be displayed in navbar
+- `footer` string, which will be inserted on the end of the page (doesn't support markup, but html)
+- `google_analytics` tracking id (tracking will be enabled only in production environments)
+- `listen_for_clients_preferred_style` boolean, used to allow users to choose theme based on their preferences (mostly affected by OS dark or light theme, details see https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+
+```yaml
+header_pages:
+  - index.md
+  - about.md
+
+style: dark # dark (default) or light
+listen_for_clients_preferred_style: true # true or false (default)
+
+footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
+
+google_analytics: UA-NNNNNNNN-N
+```
 
 ## Customization
-- `_includes/author.html`: Add your name, link to a profile picture and a short author description that appears on the bottom of each post. See <a href="https://semantic-ui.com/views/item.html">Semantic Link</a> docs.
-- `_includes/card.html`: Cards can be customized to show the essential info about a post (feature image, catagory, tags, comment count etc). See <a href="https://semantic-ui.com/views/card.html">Semantic Card</a> docs.
-- `_includes/header.html`: Replace the site logo here. Add/replace frequently visited pages and/or social links here.
-- `_includes/footer.html`: Add your copyrights, if any, here. Also link to the less frequently visited pages and/or social links here.
-- `assets/css/main.css` and `assets/css/mobile.css`: Global and mobile specific CSS files respectively
-- `assets/js/main.js`: Any common javascript goes here. If you wish to customize the search behaviour (for example, use a different search engine), that can be done here.
 
-## Screenshots (Desktop)
+If you want to customize this theme, follow this steps:
+1. Fork this repository (you can use the fork as your own theme or directly as your website)
+2. Create or modify files in `_layouts` directory for html-based changes
+3. Create or modify files in `_sass` and `assets` for css-based changes
+   - You can change things which are used in light and dark theme (like font-size) in `_sass/base.scss`. You'll find style variables at the top.
+   - Style-specific definitions are in `_sass/_dark.scss` respectively in `_sass/_light.scss`. You can change things like background-color there.
 
-### Homepage
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
+## Contributing
 
-### Sample post
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop-post.png?raw=true">
+Bug reports and pull requests are welcome on GitHub at https://github.com/b2a3e8/jekyll-theme-console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Screenshots (Mobile)
+## Development
 
-### Homepage (Portrait)
-<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile.png?raw=true">
+To set up your environment to develop this theme, run `bundle install`.
 
-### Homepage (Landscape)
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape.png?raw=true">
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-### Sample post (Portrait)
-<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-post.png?raw=true">
-
-### Footer (Landscape)
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape-footer.png?raw=true">
-
-
-## Credits
-- <a href="https://demo.ghost.io">Ghost</a> blogging platform's demo page for inspiration (and the header background image).
-- <a href="http://www.jeanchristophebonis.com/">For the Wall-E image used everywhere</a>
-- <a href="https://semantic-ui.com">Semantic UI</a>
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-console.gemspec` accordingly.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md) <3
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
