@@ -11,5 +11,13 @@
 #style: light # dark (default) or light
 #listen_for_clients_preferred_style: true # true or false (default)
 
+remote_theme: b2a3e8/jekyll-theme-console
+
 plugins:
   - jekyll-seo-tag
+
+
+theme: jekyll-theme-console
+
+url                      : "https://coleea.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
